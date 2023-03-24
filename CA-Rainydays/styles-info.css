@@ -1,0 +1,277 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+   src: ('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+body {
+    background: white;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 0 25px;
+    transition: 0.3s;
+}
+
+/*  logo styling  */
+
+.logo a {  
+    display: block;
+}
+
+.logo a img{
+    display: block;
+    width:  213px;
+    height: 115px;
+}
+
+
+/* naigation bar styling  */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    z-index: 1;
+    transition: 0.5s; 
+    
+}
+
+.menu li {
+list-style-type: none;
+}
+
+.menu li a {
+    color: black;
+    background: white;
+    text-decoration: none;
+    display: block;
+    padding:  40px 25px;
+    font-size: 20px;
+    line-height: 1;
+    transition: 0.3;
+}
+
+.menu li a:hover {
+    box-shadow: 0 -5px 0px #fff inset,
+    500px 0 0 white inset;
+    padding: 35px 25px 45px 25px;
+}
+
+/* hamburger */
+
+.hamburger {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: black;
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background: black;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.hamburger:before {
+    top: -10px;
+    width: 20px;
+}
+
+.hamburger:after {
+    top: 10px;
+    width: 25px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.hamburger,
+.toggle-menu {
+     display: none;
+}
+
+.navigation input:checked ~ .hamburger {
+    background: transparent;
+
+}
+
+.navigation input:checked ~ .hamburger:before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 30px;
+}
+
+.navigation input:checked ~ .hamburger:after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+
+.navigation input:checked ~.menu {
+    right: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .hamburger,
+    .toggle-menu {
+        display: block;
+
+    }
+
+.header {
+        padding: 10px 20px;
+    }    
+
+.menu {
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        right: -200%;
+        width: 300px;
+        height: 116px;
+        padding-top: 135px;
+    }
+
+        
+.menu li {
+    width: 100%;
+}
+
+.menu li a,
+.menu li a:hover {
+    padding: 30px;
+    font-size: 20px;
+    box-shadow: 0 1px 0 black inset;
+
+}
+
+}
+
+.hr1 {
+    border-bottom: 1px solid black;
+    border-top: none;
+}
+
+/* home-img */
+
+.container-home {
+    position: relative; /* needed for absolute positioning of text */
+    
+ }
+    
+ .container-home img {
+     display: block;
+     object-fit: fill;
+     width: 100%;
+     height: auto;
+     padding-bottom: 10px;
+         
+ }
+ 
+ /* text inside the home-img */
+ 
+ .join-now {
+     color: rgba(24, 83, 97, 1);
+     font-size: 40px;
+     text-align: center;
+     letter-spacing: 4px;
+     line-height: 150%; 
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     vertical-align: middle;
+ }
+ 
+ /* join now cta */
+ 
+ .btn-join {
+     background-color: #50B3CA;
+     color: #fff;
+     font-size: 30px;
+     border: 2px solid #50B3CA;
+     border-radius: 8px;
+     width: 346px;
+     height: 85px;
+     position: absolute;
+     top: 63%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     vertical-align: middle;
+   }
+   
+   .btn-join:hover {
+     background-color: white;
+     color: #50B3CA;
+     border: 2px solid #50B3CA;
+     border-radius: 8px;
+     position: absolute;
+     font-size: 30px;
+     width: 346px;
+     height: 85px;
+     position: absolute;
+     top: 63%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     vertical-align: middle;
+   }
+
+ 
+/* Media query for smaller screens */
+@media only screen and (max-width: 992px) {
+    .join-now {
+      font-size: 20px;
+        top: 65%;
+      transform: translate(-50%, -80%);
+    }
+    .btn-join,
+    .btn-join:hover {
+        font-size: 20px;
+        width: 30%;
+        max-width: none;
+        height: 10%;
+        max-height: none;
+        top: 80%;
+        transform: translate(-50%, -80%);
+    }
+  }
+  
