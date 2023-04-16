@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Checkout|Rainydays">
+    <meta name="description" content="This is the checkout page, where the user can insert the personal information and card details to buy the chosen product">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles-payment.css">
+    <link rel="stylesheet" href="css/main-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -32,19 +33,174 @@
         <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
         <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
         <form class="search-bar">
-            <input type="search" name="search" placeholder="Search..">
+            <input type="text" name="search" placeholder="Search.." class="inputsearch">
         </form>
     </header>
-        <main>
-            <hr class="hr1">
-            <h1>Checkout</h1>
+    <main>
+        <hr class="hr1">
+            <h1 id="checkout-title">Checkout</h1>
+            <div class="information">
             <h2>Your Information</h2>
             <p>The address must be in Norway. Fields marked with asterisk (*) are required.</p>
-            <input type="text" name="email-address" id="email-address" placeholder="Email Address *">
-            <input type="text" name="postalcode" id="postal-code" placeholder="Postal Code *">
+            <input type="text" name="email-address" id="email-address" placeholder="Email Address *" class="input-email" required>
+            <input type="text" name="postalcode" id="postal-code" placeholder="Postal Code *" class="input-postalcode" required>
             <p>Already have an account? <a href="#">Log in</a></p>
-            <button>Continue</button>
+            <button class="continue-btn">Continue</button>
+        </div>
+        <div class="delivery">
             <h2>Delivery</h2>
+            <div class="radio-group">
+              <div class="radio-container">
+                <input type="radio" name="delivery-options" id="pickup" value="pickup" required>
+                <label for="pickup">Pickup point <br> Free - Delivered between 1 to 4 business days.</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="delivery-options" id="door-delivery" value="door-delivery" required>
+                <label for="door-delivery">To door delivery <br> 69 NOK - Delivered between 1 to 4 business days.</label>
+              </div>
+              <div class="radio-container">
+                <input type="radio" name="delivery-options" id="store-pickup" value="store-pickup" required>
+                <label for="store-pickup">Store pickup <br> Free - Delivered between 1 to 3 business days.</label> 
+              </div>
+            </div>
+          </div>   
+          <div class="payment-info">
+            <h2 class="payment-title">Payment</h2>
+            <h3 id="promo-underline">Have a Promo Code or Gift Card?</h3> 
+            <br>
+             <h4>Please select from the payment options below</h4>  
+             <div class="payment-container">
+             <input type="radio" name="payment-options" id="card" value="card" required>
+             <label class="payment" for="card"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></label>
+            </div> 
+            <div class="payment-containter">
+                <input type="radio" name="payment-options" id="paypal" value="paypal" required>
+                <label class="payment" for="paypal"><i class="fa-brands fa-cc-paypal"></i></label>
+            </div>
+        </div>
+        <div class="payment-details">
+            <div class="details-container">
+            <h4>Name on card *</h4>
+            <input type="text" name="name-on-card" id="name-on-card" required>
+            </div>
+            <div class="details-container">
+            <h4>Card number *</h4>
+            <input type="text" name="card-number" id="card-number" required>
+            </div>
+            <div class="details-container">
+            <h4>Expiry date *</h4>
+            <input type="number" name="expiry-date" id="expiry-date" required> 
+            </div>
+            <div class="details-container">
+            <h4>CVC/CCV *</h4>
+            <input type="number" name="cvc" id="cvc" required>
+            </div>
+         </div>
+         <div class="total-payment">
+            <h4 id="total">Total</h4> <br>
+            <h4 class="total-price"> 1700kr</h4>
+            <a href="confirm-payment.html"><button class="confirm-payment">Confirm Payment</button></a> 
+            <div class="cards"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i>
+            </div>
+         </div>
+         <div class="order-summary-container">
+            <div class="order-summary">
+                <h1 id="order-title">Order Summary</h1>
+                <hr id="sum-hr">
+                <h2 id="text-gap">Subtotal 1200 NOK</h2>
+                <h2 id="text-gap">Door Delivery 69 NOK</h2>
+                <h3 id="green-lettering">Estimated delivery 1-4 days</h3>
+                <hr id="sum-hr">
+                <h2 id="text-gap">Total 1269 NOK</h2>
+                <h3 id="green-lettering">VAT, shipping and custom costs included.</h3>
+                <hr id="sum-hr">
+                <img class="jacket6" src="images/RainyDays_Jacket6.png" alt="Black-Grey-Jacket">
+                <h4>Snowboard Jacket Pro-X</h4>
+                <h5>Colour: Black-Grey</h5>
+                <h5>Size: Medium</h5>
+                <h6 id="delete-item-underline">Delete item from the list</h6>
+                <br>
+                <h3 id="accepted-payment">Accepted payment methods</h3>
+                <div class="cards-order-sum"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i></div>
+                <h4>Return Policy</h4>
+            </div>
+         </div>
         </main>
+        <footer>
+            <div class="logo-footer">
+              <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+            </div>
+            <div class="footer-title">
+              <h2>Checkout / Rainydays</h2>
+            </div>
+        <div class="subscribe-box">
+            <div class="warranty-text">Rainydays offer you a 3 year warranty,
+                earn points from any order, sign up and join in on exclusive adventures and events.</div>
+                <button class="sign-up">Sign up</button>
+                <div>Subscribe to our newsletter</div>
+                <form action="">
+                    <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+                </form>
+        </div>
+        <div class="footer-container1">
+        <div>
+            <h3>SHOPPING HELP</h3>
+            <ul>
+                <li>Shipping</li>
+                <li>Return</li>
+                <li>Size guide page</li>
+                <li>Materials</li>
+                <li>Customer service</li>
+            </ul>
+        </div>
+            <div>
+            <h3>ABOUT RAINYDAYS</h3>
+            <ul>
+                <li>Our history</li>
+                <li>Our responsibility</li>
+                <li>Loyalty program</li>
+                <li>Career opportunities</li>
+                <li>Our ambassadors</li>
+                <li>Our blog</li>
+            </ul>
+            </div>
+            <div>
+                <h3>REPAIR AND CARE</h3>
+                <ul>
+                    <li>Repair</li>
+                    <li>Service order</li>
+                    <li>Warranty</li>
+                    <li>Product care</li>
+                </ul>
+            </div>
+        </div>
+            <div class="footer-container2">
+            <div>
+                <h3>INFO</h3>
+                <ul>
+                    <li>Terms and conditions</li>
+                    <li>Cookies and privacy</li>
+                </ul>
+            </div>
+            <div>
+                <h3>WHERE TO BUY</h3>
+                <ul>
+                    <li>All Rainydays Stores</li>
+                    <li>Outlet</li>
+                </ul>
+            </div>
+            <div class="follow-r">
+                <h3>FOLLOW RAINYDAYS</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Tweeter</li>
+                    <li>Youtube</li>
+                    <li>Instagram</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+                </div>
+    <div class="copyright">© 2023 Rainydays,NO 123 456 2345 MVA</div>
+        </footer>
 </body>
 </html>
