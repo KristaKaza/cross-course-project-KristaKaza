@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -30,283 +31,286 @@
             <li><a href="info.html">INFO</a></li>
         </ul>
         </nav>
-        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="text" name="search" placeholder="Search..">
+        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user icon"></a>
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
         </form>
     </header>
+</body>
     <main>
         <hr class="hr1">
         <div class="men-container">
-            <img class="men-img" src="images/skier-skiing-snowy-mountain-during-daylight.jpg" alt="skier-skiing-snowy-mountain-during-daylight">
+            <img class="men-img" src="images/skier-skiing-snowy-mountain-during-daylight 2.jpg" alt="skier skiing in a snowy mountain">
             <button class="btn-men">Winter Season</button>
         </div>
-                <img class="ski-img" src="images/male-skier-skiing-downhill-trough-deep-powder-snow.jpg" alt="male-skier-skiing-downhill-trough-deep-powder-snow">
-                <h1 id="ski-title">SKI / SNOWBOARD JACKETS</h1>
+                <img class="ski-img" src="images/male-skier-skiing-downhill-trough-deep-powder-snow.jpg" alt="male skier skiing">
+                <h1 class="ski-title">SKI / SNOWBOARD JACKETS</h1>
                 <div class="flexbox-container">
-                    <a href="product.html"><div class="flexbox-description">
-                        <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket6.png" alt="black-jacket">
-                        <p>Snowboard Jacket Pro-X</p>
+                        <div class="flexbox-description">
+                            <a href="product.html">
+                            <img class="flexbox-item flexbox-item1" src="images/product-jacket.png" alt="black jacket">
+                        <p>Snowboard Jacket Pro-X</p></a>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1200</p>
+                        <p class="price">NOK 1200</p>
                        <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
-                    </div></a>
+                    </div>
                     </div> 
                     <div class="flexbox-description">
-                        <img class="flexbox-item flexbox-item2" src="images/iimages:RainyDays_Jacket1.png" alt="Orange-jacket">
+                        <img class="flexbox-item flexbox-item2" src="images/orange-grey-jacket.png" alt="Orange jacket">
                         <p>Ski Jacket Pro-plus</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Grey-Orange</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1250</p>
+                        <p class="price">NOK 1250</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description">
-                        <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket4.png" alt="Jacket-black">
+                        <img class="flexbox-item flexbox-item3" src="images/black-white.png" alt="Jacket black">
                         <p>CC Jacket Pro-A</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                         </div>
                         <hr>
-                        <p id="price">NOK 1100</p>
+                        <p class="price">NOK 1100</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div>
                         <div class="flexbox-description">
-                            <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket6.png" alt="black-jacket">
+                            <img class="flexbox-item flexbox-item1" src="images/product-jacket.png" alt="black jacket">
                             <p>Snowboard Jacket Pro-X</p>
                             <hr>
                             <p>MEN'S</p>
                             <p>Colour Black</p>
-                            <p id="sizes">XS S M L XL</p>
+                            <p class="sizes">XS S M L XL</p>
                             <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                             <hr>
-                            <p id="price">NOK 1200</p>
+                            <p class="price">NOK 1200</p>
                            <div class="btn-container">
                             <div><button class="btn-add-to-bag">Add to bag</button></div>
                         </div>
                         </div> 
                         <div class="flexbox-description">
-                            <img class="flexbox-item flexbox-item2" src="images/iimages:RainyDays_Jacket1.png" alt="Orange-jacket">
+                            <img class="flexbox-item flexbox-item2" src="images/orange-grey-jacket.png" alt="Orange jacket">
                             <p>Ski Jacket Pro-plus</p>
                             <hr>
                             <p>MEN'S</p>
                             <p>Colour Grey-Orange</p>
-                            <p id="sizes">XS S M L XL</p>
+                            <p class="sizes">XS S M L XL</p>
                             <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                             <hr>
-                            <p id="price">NOK 1250</p>
+                            <p class="price">NOK 1250</p>
                             <div class="btn-container">
                             <div><button class="btn-add-to-bag">Add to bag</button></div>
                         </div>
                         </div> 
                         <div class="flexbox-description">
-                            <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket4.png" alt="Jacket-black">
+                            <img class="flexbox-item flexbox-item3" src="images/black-white.png" alt="Jacket black">
                             <p>CC Jacket Pro-A</p>
                             <hr>
                             <p>MEN'S</p>
                             <p>Colour Black</p>
-                            <p id="sizes">XS S M L XL</p>
+                            <p class="sizes">XS S M L XL</p>
                             <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                             </div>
                             <hr>
-                            <p id="price">NOK 1100</p>
+                            <p class="price">NOK 1100</p>
                             <div class="btn-container">
                             <div><button class="btn-add-to-bag">Add to bag</button></div>
                         </div>
                         </div> 
                 </div>
-                <img class="hiking-img" src="images/hiker-going-up-aiguille-du-midi-1.jpg" alt="hiker-going-up-on-a-mountain">
-                <h1 id="hiking-title">HIKING JACKETS</h1>
+                <img class="hiking-img" src="images/hiker-going-up-aiguille-du-midi-1.jpg" alt="hiker going up on a mountain">
+                <h1 class="hiking-title">HIKING JACKETS</h1>
                 <div class="flexbox-container-hiking-section">
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket3.png" alt="red-jacket">
+                        <img class="flexbox-item flexbox-item1" src="images/redjacket.png" alt="red jacket">
                         <p>Hiking Jacket Pro-X</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Red</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1250</p>
+                        <p class="price">NOK 1250</p>
                        <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item2" src="images/RainyDays_Jacket7.png" alt="Green-Jacket">
+                        <img class="flexbox-item flexbox-item2" src="images/greenjacket.png" alt="Green Jacket">
                         <p>Hiking Jacket Pro-Plus</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Green</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1150</p>
+                        <p class="price">NOK 1150</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket5.png" alt="Jacket-black">
+                        <img class="flexbox-item flexbox-item3" src="images/grey-jacket2.png" alt="Jacket black">
                         <p>Hiking Jacket Pro-A</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                         </div>
                         <hr>
-                        <p id="price">NOK 1100</p>
+                        <p class="price">NOK 1100</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div>
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket3.png" alt="red-jacket">
+                        <img class="flexbox-item flexbox-item1" src="images/redjacket.png" alt="red jacket">
                         <p>Hiking Jacket Pro-X</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Red</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1250</p>
+                        <p class="price">NOK 1250</p>
                        <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item2" src="images/RainyDays_Jacket7.png" alt="Green-Jacket">
+                        <img class="flexbox-item flexbox-item2" src="images/greenjacket.png" alt="Green Jacket">
                         <p>Hiking Jacket Pro-Plus</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Green</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1150</p>
+                        <p class="price">NOK 1150</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-hiking-section">
-                        <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket5.png" alt="Jacket-black">
+                        <img class="flexbox-item flexbox-item3" src="images/grey-jacket2.png" alt="Jacket black">
                         <p>Hiking Jacket Pro-A</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                         </div>
                         <hr>
-                        <p id="price">NOK 1100</p>
+                        <p class="price">NOK 1100</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div>
                 </div>
-                <img class="canoeing-img" src="images/two-athletic-man-floats-red-boat-river.jpg" alt="two-athletic-man-canoeing-on-boat-river">
-                <h1 id="canoeing-title">CANOEING JACKETS</h1>
+                <img class="canoeing-img" src="images/two-athletic-man-floats-red-boat-river 2.jpg" alt="two athletic men canoeing on boat river">
+                <h1 class="canoeing-title">CANOEING JACKETS</h1>
                 <div class="flexbox-container-canoeing-section">
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket2.png" alt="black-canoeing-jacket">
+                        <img class="flexbox-item flexbox-item1" src="images/greujacket1.png" alt="black canoeing jacket">
                         <p>Canoeing Jacket Pro-X</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1100</p>
+                        <p class="price">NOK 1100</p>
                        <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item2" src="images/iimages:RainyDays_Jacket1.png" alt="Orange-jacket">
+                        <img class="flexbox-item flexbox-item2" src="images/orange-grey-jacket.png" alt="Orange jacket">
                         <p>Canoeing Jacket Pro-Plus</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Grey-Orange</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1299</p>
+                        <p class="price">NOK 1299</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket4.png" alt="Jacket-black">
+                        <img class="flexbox-item flexbox-item3" src="images/black-white.png" alt="Jacket black">
                         <p>CC Jacket Pro-A</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                         </div>
                         <hr>
-                        <p id="price">NOK 1299</p>
+                        <p class="price">NOK 1299</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div>
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket2.png" alt="black-canoeing-jacket">
+                        <img class="flexbox-item flexbox-item1" src="images/greujacket1.png" alt="black canoeing jacket">
                         <p>Canoeing Jacket Pro-X</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1100</p>
+                        <p class="price">NOK 1100</p>
                        <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item2" src="images/iimages:RainyDays_Jacket1.png" alt="Orange-jacket">
+                        <img class="flexbox-item flexbox-item2" src="images/orange-grey-jacket.png" alt="Orange jacket">
                         <p>Canoeing Jacket Pro-Plus</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Grey-Orange</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                         <hr>
-                        <p id="price">NOK 1299</p>
+                        <p class="price">NOK 1299</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
                     </div> 
                     <div class="flexbox-description-canoeing-section">
-                        <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket4.png" alt="Jacket-black">
+                        <img class="flexbox-item flexbox-item3" src="images/black-white.png" alt="Jacket black">
                         <p>CC Jacket Pro-A</p>
                         <hr>
                         <p>MEN'S</p>
                         <p>Colour Black</p>
-                        <p id="sizes">XS S M L XL</p>
+                        <p class="sizes">XS S M L XL</p>
                         <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                         </div>
                         <hr>
-                        <p id="price">NOK 1299</p>
+                        <p class="price">NOK 1299</p>
                         <div class="btn-container">
                         <div><button class="btn-add-to-bag">Add to bag</button></div>
                     </div>
@@ -315,7 +319,7 @@
     </main>
     <footer>
         <div class="logo-footer">
-          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <div class="footer-title">
           <h2>Men / Rainydays</h2>
@@ -325,8 +329,10 @@
             earn points from any order, sign up and join in on exclusive adventures and events.</div>
             <button class="sign-up">Sign up</button>
             <div>Subscribe to our newsletter</div>
-            <form action="">
+            <form action="#">
+                <label for="email">
                 <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+                </label>
             </form>
     </div>
     <div class="footer-container1">

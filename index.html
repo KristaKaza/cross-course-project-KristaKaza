@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -31,71 +32,75 @@
         </ul>
         </nav>
         <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="text" name="search" placeholder="Search..">
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
         </form>
     </header>
+</body>
     <main>
         <hr class="hr1">
         <!-- HOME IMAGE -->
         <div class="container-home">
-            <img class="home-img" src="images/womanskiing.png" alt="woma skiing">
+            <img class="home-img" src="images/homepageimg.jpg" alt="woman skiing">
             <div class="join-now">Join and get a 20% discount on your first order.</div>
             <div><button class="btn-join">Join Now!</button></div>
         </div>
         <!-- AUTUMN SEASON IMG+BUTTON -->
+        <div class="container-seasons">
             <div class="img-container-autumn"> 
-            <img src="images/55d377f4-1d30-4765-b989-631658c6996b.png" alt="hiker-standing-on-top-of-the-mountain">
+            <img src="images/autumn-img.jpg" alt="hiker standing on top of the mountain">
             <div><button class="btn-autumn">Autumn Season</button></div>
-        </div>
+            </div>
             <div class="img-container-winter"> 
-            <img src="images/skier-skiing-snowy-mountain-during-daylight.jpg" alt="skier-skiing-snowy-mountain-during-daylight">
+            <img src="images/skier-skiing-snowy-mountain-during-daylight 2.jpg" alt="skier skiing snowy mountain during daylight">
             <div><a href="men.html"><button class="btn-winter">Winter Season</button></a></div>
-        </div>
-        <div class="bestseller">
+            </div>
+            <div class="bestsellers">
             <h1>BESTSELLERS</h1>
+        </div>
         </div>
         <div class="flexbox-container">
             <div class="flexbox-description">
-                <img class="flexbox-item flexbox-item1" src="images/RainyDays_Jacket3.png" alt="red-jacket">
+                <img class="flexbox-item flexbox-item1" src="images/redjacket.png" alt="red jacket">
                 <p>Hiking Jacket Pro-X</p>
                 <hr>
                 <p>MEN'S</p>
                 <p>Colour Red-Black</p>
-                <p id="sizes">XS S M L XL</p>
+                <p class="sizes">XS S M L XL</p>
                 <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                 <hr>
-                <p id="price">NOK 1000</p>
+                <h2 class="price">NOK 1000</h2>
                 <div class="btn-container">
                 <div><button class="btn-add-to-bag">Add to bag</button></div>
             </div>
             </div> 
             <div class="flexbox-description">
-                <img class="flexbox-item flexbox-item2" src="images/iimages:RainyDays_Jacket1.png" alt="Orange-jacket">
+                <img class="flexbox-item flexbox-item2" src="images/orange-grey-jacket.png" alt="Orange jacket">
                 <p>Ski Jacket Pro-plus</p>
                 <hr>
                 <p>MEN'S</p>
                 <p>Colour Grey-Orange</p>
-                <p id="sizes">XS S M L XL</p>
+                <p class="sizes">XS S M L XL</p>
                 <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span></div>
                 <hr>
-                <p id="price">NOK 1200</p>
+                <h2 class="price">NOK 1200</h2>
                 <div class="btn-container">
                 <div><button class="btn-add-to-bag">Add to bag</button></div>
             </div>
             </div> 
             <div class="flexbox-description">
-                <img class="flexbox-item flexbox-item3" src="images/RainyDays_Jacket4.png" alt="Jacket-black">
+                <img class="flexbox-item flexbox-item3" src="images/black-white.png" alt="Jacket black">
                 <p>CC Jacket Pro-A</p>
                 <hr>
                 <p>MEN'S</p>
                 <p>Colour Black</p>
-                <p id="sizes">XS S M L XL</p>
+                <p class="sizes">XS S M L XL</p>
                 <div class="dots"><span class="dot1"></span><span class="dot2"></span><span class="dot3"></span>
                 </div>
                 <hr>
-                <p id="price">NOK 1100</p>
+                <h2 class="price">NOK 1100</h2>
                 <div class="btn-container">
                 <div><button class="btn-add-to-bag">Add to bag</button></div>
             </div>
@@ -104,7 +109,7 @@
     </main>
     <footer>
         <div class="logo-footer">
-          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <div class="footer-title">
           <h2>Home / Rainydays</h2>
@@ -114,8 +119,10 @@
             earn points from any order, sign up and join in on exclusive adventures and events.</div>
             <button class="sign-up">Sign up</button>
             <div>Subscribe to our newsletter</div>
-            <form>
+            <form action="#">
+                <label for="email">
                 <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+                </label>
             </form>
     </div>
     <div class="footer-container1">

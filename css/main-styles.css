@@ -146,6 +146,7 @@ list-style-type: none;
     font-size: 17px;
     text-decoration: none;
     left: 10px;
+    color: black;
 }
 
 .user-icon {
@@ -161,7 +162,7 @@ list-style-type: none;
 }
 
 
- .search-bar {
+ .search{
   position: absolute;
   top: 57px;
   right: 74px;
@@ -169,6 +170,9 @@ list-style-type: none;
   align-items: center;
 }
 
+.hidden-label {
+  display: none;
+}
 
 input[type=text] {
   padding: 10px 20px 10px 20px;
@@ -194,6 +198,7 @@ input[type=text] {
         width: 300px;
         height: 116px;
         padding-top: 135px;
+        z-index: 2;
     }
 
     .navigation input:checked ~.menu {
@@ -225,7 +230,7 @@ input[type=text] {
   display: block;
 }
   
-.search-bar {
+.search {
  display: none;
 }
 }
@@ -236,7 +241,7 @@ input[type=text] {
 .flexbox-description-hiking-section img,
 .flexbox-description-canoeing-section img {
   max-width: 100%;
-  max-height: 200px;
+  max-height: 235px;
   object-fit: contain;
   flex: 1;
 }
@@ -250,28 +255,24 @@ input[type=text] {
   padding-left: 20px;
 }
 
-#price {
+.price {
   font-size: 30px;
   font-weight: bold;
+  padding-left: 20px;
 }
 
-#sizes {
+.sizes {
   word-spacing: 8px;
 }
 
-#sizes:hover {
+.sizes:hover {
   word-spacing: 8px;
-}
-
-#colour {
-  font-weight:lighter;
 }
 
 .btn-container{
   display: flex;
-  align-self: flex-end;
-  justify-self: flex-end;
-  position: relative;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
 }
 
@@ -287,10 +288,7 @@ input[type=text] {
 .btn-add-to-bag:hover {
   color: white;
   border: 1px solid #F7FBFD;
-  border-radius: 10px;
   background-color: rgba(14, 73, 87, 1);
-  font-size: 20px;
-  padding: 12px 36px;
 }
 
 .dots {
@@ -329,7 +327,7 @@ input[type=text] {
 /* FOOTER */
 
 footer {
-    background-color: #49a3ba;
+    background-color: #106a81;
     color: #fff;
     display: flex;
     position: relative;
@@ -421,18 +419,16 @@ footer {
     line-height: 25px;
   }
   
-  .sign-up,
-  #email {
-    color: #50B3CA;
+  .sign-up {
+    color: #106a81;
     border: 1px solid white;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
-    background-color:#49a3ba;
-    color: white;
+    background-color:white;
   }
   
   .submit-footer {
-    color:#50B3CA;
+    color:#106a81;
     border: 1px solid white;
     padding: 10px 20px 10px 20px;
     border-radius: 10px;
@@ -456,8 +452,8 @@ footer {
   @media (max-width: 1400px) {
   
     footer {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column; 
+     align-items: center; 
     }
   
     .logo-footer a img {
@@ -486,10 +482,14 @@ footer {
     margin: 23px auto;
     flex-direction: row;
     row-gap: 21px;
+    padding: 30px;
   }
   
   .footer-container2{
     margin: 10px auto;
     padding-bottom: 30px;
+    padding-left: 30px;
+    row-gap: 28px;
+    padding-right: 30px;
 }
   }

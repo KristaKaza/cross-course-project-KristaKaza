@@ -1,6 +1,6 @@
 /* MAIN */
 main {
-  height: 4558px;
+  height: 4036px;
 }
 
 .men-container {
@@ -29,13 +29,14 @@ main {
 .btn-men {
   background-color: #185361;
   font-size: 20px;
-  position: relative;
-  display: block;
-  top: 305px;
   padding: 20px 30px 20px 30px;
-  margin-left: 27px;
   border-color: #185361;
   color: white;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 .ski-img {
@@ -48,7 +49,7 @@ main {
   padding: 10px;
 }
 
-#ski-title {
+.ski-title {
   color: #185361;
   font-size: 50px;
   font-weight: 900;
@@ -143,7 +144,7 @@ main {
   padding: 10px;
 }
 
-#hiking-title {
+.hiking-title {
   color: #185361;
   font-size: 50px;
   font-weight: 900;
@@ -156,7 +157,7 @@ main {
   letter-spacing: 3px;
 }
 
-#canoeing-title {
+.canoeing-title {
   color: white;
   font-size: 50px;
   font-weight: 900;
@@ -182,7 +183,8 @@ main {
     }
   
     .btn-men {
-      top: -77px;
+      position:relative;
+      bottom: 77px;
     }
   
     .ski-img {
@@ -206,27 +208,27 @@ main {
       top: -100px;
     }
 
-    #ski-title {
+    .ski-title {
       text-align: start;
       top: -168px;
       font-size: 30px;
       right: 8em;
     }
   
-    #hiking-title {
+    .hiking-title {
       text-align: start;
       top: -280px;
       font-size: 30px;
       right: 8em;
     }
 
-    #canoeing-title{
+    .canoeing-title{
       top:-280px;
       font-size: 30px;
     }
 
     .flexbox-container, .flexbox-container-hiking-section, .flexbox-container-canoeing-section {
-      flex-wrap: nowrap;
+    flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0;

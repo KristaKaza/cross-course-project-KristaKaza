@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>            
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -30,74 +31,82 @@
             <li><a href="info.html">INFO</a></li>
         </ul>
         </nav>
-        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="text" name="search" placeholder="Search.." class="inputsearch">
-        </form>
+        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user icon"></a>
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
+        </form>        
     </header>
+</body>
     <main>
         <hr class="hr1">
-            <h1 id="checkout-title">Checkout</h1>
+            <h1 class="checkout-title">Checkout</h1>
             <div class="information">
             <h2>Your Information</h2>
-            <p>The address must be in Norway. Fields marked with asterisk (*) are required.</p>
+            <form action="#" class="information">
+                <label for="email-address">The address must be in Norway. Fields marked with asterisk (*) are required.</label>
             <input type="text" name="email-address" id="email-address" placeholder="Email Address *" class="input-email" required>
+            </form>
+            <form action="#" class="information">
+                <label for="postal-code" class="label-postal-code">Postal Code:</label>
             <input type="text" name="postalcode" id="postal-code" placeholder="Postal Code *" class="input-postalcode" required>
-            <p>Already have an account? <a href="#">Log in</a></p>
+            </form>
+            <p class="login-account">Already have an account? <a href="#">Log in</a></p>
             <button class="continue-btn">Continue</button>
-        </div>
+            </div>
         <div class="delivery">
-            <h2>Delivery</h2>
-            <div class="radio-group">
+            <fieldset>
+                <div class="radio-group">
               <div class="radio-container">
                 <input type="radio" name="delivery-options" id="pickup" value="pickup" required>
-                <label for="pickup">Pickup point <br> Free - Delivered between 1 to 4 business days.</label>
-              </div>
-              <div class="radio-container">
+                <legend class="choice">Pickup point</legend>
+                <label for="pickup">Free - Delivered between 1 to 4 business days.</label>
                 <input type="radio" name="delivery-options" id="door-delivery" value="door-delivery" required>
-                <label for="door-delivery">To door delivery <br> 69 NOK - Delivered between 1 to 4 business days.</label>
-              </div>
-              <div class="radio-container">
+                <legend class="choice">Door delivery</legend>
+                <label for="door-delivery"> 69 NOK - Delivered between 1 to 4 business days.</label>
                 <input type="radio" name="delivery-options" id="store-pickup" value="store-pickup" required>
-                <label for="store-pickup">Store pickup <br> Free - Delivered between 1 to 3 business days.</label> 
+                <legend class="choice">Store pickup</legend>
+                <label for="store-pickup">Free - Delivered between 1 to 3 business days.</label> 
               </div>
             </div>
+        </fieldset>
           </div>   
           <div class="payment-info">
             <h2 class="payment-title">Payment</h2>
-            <h3 id="promo-underline">Have a Promo Code or Gift Card?</h3> 
-            <br>
-             <h4>Please select from the payment options below</h4>  
-             <div class="payment-container">
+            <h3 class="promo-underline">Have a Promo Code or Gift Card?</h3> 
+            <br> 
+                <fieldset class="select-options">
+                <legend>Please select from the payment options below</legend>
              <input type="radio" name="payment-options" id="card" value="card" required>
-             <label class="payment" for="card"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></label>
-            </div> 
-            <div class="payment-containter">
+             <label class="payment bankcards" for="card">banck cards</label><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i>
+             <br>
                 <input type="radio" name="payment-options" id="paypal" value="paypal" required>
-                <label class="payment" for="paypal"><i class="fa-brands fa-cc-paypal"></i></label>
-            </div>
+                <label class="payment bankcards" for="paypal">visa</label><i class="fa-brands fa-cc-paypal"></i>
+            </fieldset>
         </div>
         <div class="payment-details">
             <div class="details-container">
-            <h4>Name on card *</h4>
+            <form action="#">
+                <label for="name-on-card">Name on card *</label>
             <input type="text" name="name-on-card" id="name-on-card" required>
             </div>
             <div class="details-container">
-            <h4>Card number *</h4>
+                <label for="card-number">Card number*</label>
             <input type="text" name="card-number" id="card-number" required>
             </div>
             <div class="details-container">
-            <h4>Expiry date *</h4>
+                <label for="expiry-date">Expiry date *</label>
             <input type="number" name="expiry-date" id="expiry-date" required> 
             </div>
             <div class="details-container">
-            <h4>CVC/CCV *</h4>
+                <label for="cvc">CVC *</label>
             <input type="number" name="cvc" id="cvc" required>
             </div>
+        </form>
          </div>
          <div class="total-payment">
-            <h4 id="total">Total</h4> <br>
+            <h4 class="total">Total</h4> <br>
             <h4 class="total-price"> 1700kr</h4>
             <a href="confirm-payment.html"><button class="confirm-payment">Confirm Payment</button></a> 
             <div class="cards"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i>
@@ -105,22 +114,22 @@
          </div>
          <div class="order-summary-container">
             <div class="order-summary">
-                <h1 id="order-title">Order Summary</h1>
-                <hr id="sum-hr">
-                <h2 id="text-gap">Subtotal 1200 NOK</h2>
-                <h2 id="text-gap">Door Delivery 69 NOK</h2>
-                <h3 id="green-lettering">Estimated delivery 1-4 days</h3>
-                <hr id="sum-hr">
-                <h2 id="text-gap">Total 1269 NOK</h2>
-                <h3 id="green-lettering">VAT, shipping and custom costs included.</h3>
-                <hr id="sum-hr">
-                <img class="jacket6" src="images/RainyDays_Jacket6.png" alt="Black-Grey-Jacket">
+                <h1 class="order-title">Order Summary</h1>
+                <hr class="sum-hr">
+                <h2 class="text-gap">Subtotal 1200 NOK</h2>
+                <h2 class="text-gap">Door Delivery 69 NOK</h2>
+                <h3 class="green-lettering">Estimated delivery 1-4 days</h3>
+                <hr class="sum-hr">
+                <h2 class="text-gap">Total 1269 NOK</h2>
+                <h3 class="green-lettering">VAT, shipping and custom costs included.</h3>
+                <hr class="sum-hr">
+                <img class="jacket6" src="images/product-jacket.png" alt="Black and Grey Jacket">
                 <h4>Snowboard Jacket Pro-X</h4>
                 <h5>Colour: Black-Grey</h5>
                 <h5>Size: Medium</h5>
-                <h6 id="delete-item-underline">Delete item from the list</h6>
+                <h6 class="delete-item-underline">Delete item from the list</h6>
                 <br>
-                <h3 id="accepted-payment">Accepted payment methods</h3>
+                <h3 class="accepted-payment">Accepted payment methods</h3>
                 <div class="cards-order-sum"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i></div>
                 <h4>Return Policy</h4>
             </div>
@@ -128,7 +137,7 @@
         </main>
         <footer>
             <div class="logo-footer">
-              <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+              <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
             </div>
             <div class="footer-title">
               <h2>Checkout / Rainydays</h2>
@@ -138,8 +147,10 @@
                 earn points from any order, sign up and join in on exclusive adventures and events.</div>
                 <button class="sign-up">Sign up</button>
                 <div>Subscribe to our newsletter</div>
-                <form action="">
+                <form action="#">
+                    <label for="email">
                     <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+                </label>
                 </form>
         </div>
         <div class="footer-container1">

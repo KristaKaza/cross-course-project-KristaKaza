@@ -17,39 +17,26 @@
     text-align: center;
     display: flex;
     flex-direction: row;
-    padding: 0 0 0 400px;
+    padding-left: 400px;
 }
 
-#fill-out {
+.fill-out {
     font-size: 25px;
-    padding-bottom: 30px;
 }
 
 .contact-form { 
-  max-width:420px; 
-  margin:180px auto; 
+  max-width: 420px;
+  margin: 180px auto;
   margin-left: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
-#contact-input {
-    color:black;
-    font-family: 'Roboto', sans-serif;
-    font-weight:500;
-    font-size: 15px;
-    border-radius: 5px;
-    line-height: 15px;
-    background-color: transparent;
-    border:2px solid rgba(14, 73, 87, 1);
-    transition: all 0.3s;
-    padding: 13px;
-    margin-bottom: 15px;
-    width:100%;
-    box-sizing: border-box;
-    outline:0;
-  }
-  
-  #contact-input:focus {
-     border:2px solid #50B3CA;
+  input[type="email"] {
+    border: 1px solid black;
+    padding: 10px 20px 10px 20px;
+    border-radius: 2px;
   }
   
   textarea {
@@ -92,24 +79,24 @@
     position: relative;
     margin-left: 800px;
     list-style: none;
-    line-height: 50px;
+    line-height: 60px;
     font-size: 25px;
     bottom: 150px;
     padding-bottom: 10px;
   }
 
-  .hr2 {
-    position: relative;
-    bottom: 120px;
-    border: 0.7px solid black;
-    width: 100%;
-  }
-
-  .hr-faq {
+  .customer-service-options li {
+    border-bottom: 0.5px solid black ;
     width: 50%;
-    border: 0.5px solid black;
   }
 
+.chat-now {
+  color: rgba(14, 73, 87, 1);
+  text-decoration: none;
+  border: 1px solid rgba(14, 73, 87, 1);
+  padding: 11px 20px;
+  border-radius: 10px;
+}
 
   .contact-option3 {
     position: relative;
@@ -143,6 +130,12 @@
       margin: 69px 0 0;
       padding: 44px;
     }
+
+    .chat-now {
+      padding: 10px;
+      display: flex;
+      width: fit-content;
+    }
   
     .contact-option2 {
       font-size: 25px;
@@ -157,9 +150,6 @@
       font-size: 20px;
     }
   
-    .hr2 {
-      top: 10px;
-    }
   
     .contact-option3 {
       font-size: 25px;

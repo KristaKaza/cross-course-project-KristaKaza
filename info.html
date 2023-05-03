@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -31,21 +32,27 @@
         </ul>
         </nav>
         <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="search" name="search" placeholder="Search..">
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
         </form>
     </header>
+</body>
 <main>
     <hr class="hr1">
     <h1 class="contact">Contact Us</h1>
-    <h2 class="contact-option1">Contact form</h2><form class="contact-form">
-    <p id="fill-out">Fill out our contact form</p>
-    <input type="text" name="fullname" id="contact-input" placeholder="Fullname" required>
-    <input type="text" name="email" id="contact-input" placeholder="Email" required>
-    <textarea name="comment" id="contact-input" placeholder="Comment" required></textarea>
-    <input type="submit" value="SUBMIT"/>
-</form>
+    <h2 class="contact-option1">Contact form</h2>
+    <form class="contact-form">
+    <h2 class="fill-out">Fill out our contact form</h2>
+            <label for="fullname" class="hidden-label">Full Name:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="Full Name" required><br>
+            <label for="email" class="hidden-label">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required><br>
+            <label for="comment" class="hidden-label">Comment:</label>
+            <textarea name="comment" id="comment" placeholder="Comment" required></textarea><br>
+            <input type="submit" value="Submit"/>
+          </form>
     <h2 class="contact-option2">Customer Service</h2>
     <ul class="customer-service-options">
         <li>Online Chat. <a class="chat-now" href="#">Chat with us now</a></li>
@@ -65,16 +72,11 @@
     </ul>
     <hr class="hr2">  
     <h2 class="contact-option3">FAQ</h2> 
-    <ul class="customer-service-options">
-        <hr class="hr-faq">
+    <ul class="customer-service-options">    
         <li>Returns and exchange</li>
-        <hr class="hr-faq">
         <li>Orders</li>
-        <hr class="hr-faq">
         <li>Warranty and repair</li>
-        <hr class="hr-faq">
         <li>Shipping and Payment</li>
-        <hr class="hr-faq">
     </ul>  
 </main>
 <footer>
@@ -89,9 +91,10 @@
         earn points from any order, sign up and join in on exclusive adventures and events.</div>
         <button class="sign-up">Sign up</button>
         <div>Subscribe to our newsletter</div>
-        <form action="">
-            <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
-        </form>
+        <form action="#">
+            <input type="email" name="email" id="email" placeholder="name@example.com">
+            <button class="submit-footer">Submit</button>
+          </form>            
 </div>
 <div class="footer-container1">
 <div>

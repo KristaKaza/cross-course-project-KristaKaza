@@ -1,10 +1,10 @@
 /* INFORMATION */
 
 main {
-  height: 1850px;
+  height: 2069px;
 }
 
-#checkout-title {
+.checkout-title {
   font-size: 40px;
   position: relative;
   display: flex;
@@ -25,10 +25,17 @@ main {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: flex-start;
-  row-gap: 6px;
   font-size: 18px;
-  padding: 40px;
+  row-gap: -5px;
+  padding-left: 23px;
+  padding-top: 20px;
+  padding-bottom: 10px;
   align-items: stretch;
+}
+
+.login-account {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .input-email, .input-postalcode {
@@ -53,38 +60,34 @@ main {
 
 .delivery {
   padding: 0px 40px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  row-gap: 11px;
-  align-content: flex-start;
+  width: 34rem;
   font-size: 18px;
   position: relative;
 }
 
+.delivery-title {
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+
 .radio-group {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
   padding: 30px;
 }
 
 .radio-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.radio-container label {
-  margin-left: 10px;
-}
-
-.radio-group input[type="radio"] {
-  margin-right: 5px;
+.choice {
+  margin-left: 26px;
 }
 
 label {
-  display: inline-block;
+  display: flex;
   padding: 18px;
   font-size: 17px;
 }
@@ -93,9 +96,16 @@ input[type="radio"] {
   transform: scale(1.5);
 }
 
-#promo-underline {
+.select-options {
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.promo-underline {
   border-bottom: 1px solid black;
-  width: 17rem;
+  width: 20rem;
 }
 
 .payment-title {
@@ -103,15 +113,19 @@ input[type="radio"] {
   padding-bottom: 40px;
 }
 
-.payment i {
+.fa-brands {
   margin-right: 5px;
   font-size: 45px;
   color: #185361;
 }
 
+.bankcards {
+  display: none;
+}
+
 .payment-info {
   font-size: 18px;
-  padding: 40px 40px;
+  padding: 40px 40px 10px;
   position: relative;
 }
 
@@ -130,7 +144,7 @@ input[type="radio"] {
   padding: 7px 20px 7px 10px;
 }
 
-#expiry-date, #cvc {
+.expiry-date, .cvc {
  padding: 6px 0px 5px 10px;
 }
 
@@ -145,7 +159,7 @@ input[type="radio"] {
 }
 
 
-#total {
+.total {
   padding: 10px 40px;
   font-size: 30px;
 }
@@ -214,7 +228,7 @@ input[type="radio"] {
   border-radius: 14px;
 }
 
-#order-title {
+.order-title {
   color: #185361;
   font-size: 30px;
   padding: 26px 20px 10px 50px;;
@@ -233,25 +247,25 @@ input[type="radio"] {
 }
 
 
-#delete-item-underline {
+.delete-item-underline {
   border-bottom: 0.5px solid black;
   width: 115px;
 }
 
-#sum-hr {
+.sum-hr {
   color: black;
   border: 0.5px solid;
 }
 
-#green-lettering {
+.green-lettering {
   color: #185361;
 }
 
-#text-gap {
+.text-gap {
   font-size: 21px;
 }
 
-#accepted-payment {
+.accepted-payment {
   font-size: 14px;
 }
 
@@ -261,7 +275,7 @@ input[type="radio"] {
     height: auto;
   }
 
-  #checkout-title {
+  .checkout-title {
     font-size: 30px;
   }
 
@@ -275,6 +289,10 @@ input[type="radio"] {
 
   .continue-btn:hover {
     padding: 10px
+  }
+
+  .delivery {
+    width: auto;
   }
 
   .payment-details {
@@ -301,7 +319,7 @@ input[type="radio"] {
 
   .order-summary-container {
     transform: none;
-  }
+    }
 
   .jacket6 {
     width: 50%;

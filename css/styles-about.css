@@ -1,66 +1,57 @@
-/* Main */
 main {
-    height: 3200px;
+    height: 99em;
 }
 
-.about-us-container,
-.our-blog-container {
-    position: relative;
-  }
+.about-title {
+    padding-left: 30px;
+    margin-left: 88px;
+    padding-top: 26px;
+    color: #185368;
+}
 
 .img-about-us img {
-    display: block;
-    object-fit: fill;
-    width: 100%;
-    height: auto;
-    padding-bottom: 10px;
-    object-fit: cover;
+    width: 50%;
+    right: 0;
     position: absolute;
-    clip: rect(0px, 2330px, 987px, 0px);
-    padding-bottom: 10px;
-}
-
-.img-our-blog img {
-    display: block;
-    width: 100%;
-    height: auto;
     object-fit: cover;
-    position: absolute;
-    clip: rect(236px, 2327px, 1342px, 0px);
-    top: 752px;
+    height: 29em;
 }
 
-/* text inside the about us img */
-h1 {
-    color: rgba(14, 73, 87, 1);
-    font-size: 40px;
-    font-weight: 200;
-    padding-bottom: 25px;
-}
-
-.about-us-text {
-    color: rgba(14, 73, 87, 1);
+.about-paragraph {
+    width: 44%;
+    line-height: 2;
     font-size: 18px;
-    text-align: start;
-    letter-spacing: 1px;
-    line-height: 200%;
-    position: absolute;
-    left: 42%;
-    padding: 170px;
-    transform: translate(-74%, -7%);
+    padding-left: 116px;
+    padding-top: 13px;
+    color: #185368;
 }
+
+/* .our-blog-container {
+    position: relative;
+} */
 
 .our-blog-text {
-    letter-spacing: 1px;
-    line-height: 200%;
+    line-height: 2;
+    font-size: 18px;
+    right: 75px;
     position: absolute;
-    left: 60%;
-    top: 750px;
-    padding: 19px;
-    transform: translate(-135%, 126%);
-    background-color: rgba(238, 238, 238, 0.8);
-    color: rgba(14, 73, 87, 1);
+    margin-top: 136px;
+    color: #185368;
+    max-width: 38em;
 }
+
+.flexbox-img-1-blog {
+    width: 50%;
+    position: absolute;
+    left: 0;
+    padding-top: 62px;
+    object-fit: cover;
+}
+
+.fa-brands{
+    color: #185368;
+    font-size: 35px;
+} 
 
 .post {
     text-decoration: underline rgba(14, 73, 87, 1);
@@ -68,90 +59,74 @@ h1 {
 
 .our-blog-flexbox {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    top: 38.8em;
     position: relative;
-    top: 1850px;
 }
 
-.our-blog-flexbox img{
-    clip: rect(-1px, 1136px, 757px, 100px);
-    width: 50%; 
+.our-blog-flexbox img {
+    width: 50%;
+    object-fit: cover;
 }
 
-.our-blog-container-2 {
-    display: flex;
-    position: relative;
-    top: 1850px;
-
+.img-crop {
+    height: 35em;
 }
 
-.our-blog-container-2 img {
-    width: 50%; 
+ .follow-us-social {
+    padding-top: 27px;
 }
 
-#follow-us-social {
-    position: absolute;
-    bottom: 270px;
-    right: 50px;
-    align-self: center;
-    margin-left: 1003px;
-    margin-right: 78px;
-    line-height: 100px;
-    font-size: 55px;
-    text-align: center;
-}
-  
-.social-media {
-    position: absolute;
-    bottom: 200px;
-    right: 218px;
-    font-size: 53px;
-}
+
 
 @media screen and (max-width: 900px) {
+main {
+    height: auto;
+}
+
     .img-about-us img{
         width: 100%;
         height: 390px;
     }
 
-    .about-us-text {
-    font-size: 15px;
-    text-align: center;
-    left: 38%;
-    padding: 20px;
-    transform: translate(-31%, 50%);
+    .about-paragraph{
+        position: relative;
+        width: auto;
+        padding-left: 15px;
+        padding-right: 11px;
+        top: 22em;
     }
 
-    .img-our-blog img {
-    width: 100%;
-    height: 670px;
-    top: 1042px;
+    .about-title {
+        top: 12em;
+        position: relative;
+    }
+
+    .flexbox-img-1-blog {
+        width: 100%;
+        top: 0;
+        height: 23em;
+        position: absolute;
+    }
+
+    .our-blog-container {
+        position: relative;
+        top: 17em;
     }
 
     .our-blog-text {
-        font-size: 18px;
+        position: relative;
+        top: 379px;
+        padding: 20px;
         left: 0;
-        padding: 62px;
-        transform: translate(0%, 222%);
+        width: auto;
+        margin-bottom: 6em;
     }
 
-    .our-blog-flexbox,.our-blog-container-2  {
-        top: 2160px;
+    .our-blog-flexbox {
+        position: relative;
     }
-
-    #follow-us-social {
-    top: 33px;
-    font-size: 31px;
-    line-height: 1.5;
-    padding-left: 321px;
-    margin: 0;
-    }
-    
-
-    .social-media {
-        top: 185px;
-        font-size: 30px;
-        left: 343px;
-        right: 0;
-    }
-
 }

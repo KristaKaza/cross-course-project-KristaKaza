@@ -7,8 +7,7 @@
    display: block;
     object-fit: fill;
     width: 100%;
-    height: auto;
-   padding-bottom: 10px;       
+    height: auto;     
  }
  
 /* text inside the home-img */
@@ -88,16 +87,8 @@
   .btn-autumn {
     background-color: #FDB833;
     color: #fff;
-    font-size: 1.5em;
-    width: 30%;
-    height: 12%;
-    position: absolute;
     border: solid #FDB833;
     border-radius: 8px;
-    bottom: 2%;
-    right: 7%;
-    text-align: center;
-    max-width: 40%;
   }
   
   .btn-autumn:hover {
@@ -142,26 +133,48 @@
 .btn-winter {
     background-color: #185361;
     color: #fff;
-    font-size: 1.5em;
-    width: 30%;
-    height: 12%;
-    position: absolute;
     border: solid #185361;
     border-radius: 8px; 
-    bottom: 2%;
-    right: 8%;
-    text-align: center;
-    max-width: 40%;
+}
+
+.btn-autumn, .btn-winter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-size: 2.0rem;
+  width: 327px;
+  height: 96px;
 }
 
 .btn-winter:hover {
-    background-color: white;
-    color:  #185361;
-    border: 2px solid  #185361;
-    border-radius: 8px;    
-  }
+  background-color: #fff;
+  color: #185361;
+}
 
-  @media only screen and (max-width: 992px) {
+.container-seasons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container img {
+  margin: 0 20px;
+}
+
+.bestsellers h1 {
+  margin: 35px;
+  font-weight: 300;
+  font-size: 27px;
+  color: rgba(14, 73, 87, 1);
+  letter-spacing: 0.25px;
+  text-decoration: underline;
+}
+
+  @media only screen and (max-width: 900px) {
     .img-container-autumn,
     .img-container-winter{
       width: 100%;
@@ -173,50 +186,21 @@
     }
 
    .btn-winter,  .btn-autumn  {
-      font-size: 20px;
-      width: 42%;
-      height: 14%;
-      position: absolute;
-      bottom: 2%;
-      right: 6px;
-      text-align: center;
+    font-size: 1.5rem;
+    width: 46%;
+    height: 31%;
     } 
-
-    .btn-winter:hover,  .btn-autumn:hover {
-      font-size: 20px;
-      width: 42%;
-      height: 14%;
-      position: absolute;
-      bottom: 2%;
-      right: 6px;
-      text-align: center;
-    }
-
-
   }
 
 /* BESTSELLERS  */
 
-.bestseller {
-  font-weight: 300;
-  font-size: 27px;
-  color: rgba(14, 73, 87, 1);
-  letter-spacing: 0.25px;
-  text-decoration: underline;
-  margin: 41%;
-  display: block;
-  
-}
-
 .flexbox-container {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  position: relative;
+  justify-content: center;
   column-gap: 40px;
-  bottom: 700px;
-  padding: 8em;
-
+  padding-top: 109px;
+  padding-bottom: 60px;
+  flex-direction: row;
 }
 
 .flexbox-description {
@@ -226,26 +210,29 @@
   position: relative;
   align-items: stretch;
   border-radius: 11px;
+  width: 300px;
 }
 
 /* ADD MEDIA QUERY FOR BESTSELLER SECTION */
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 900px) {
 
 
   h1 {
     font-size: 25px;
+    text-align: center;
   }
   
-  .bestseller {
+  .bestseller h1 {
     padding: 20px;
+    text-align: center;
   }
 
   .flexbox-container {
     flex-direction: column;
-    bottom: 200px;
     padding: 4em;
     gap: 10px;
+    align-items: center;
   }
   
   .flexbox-description {

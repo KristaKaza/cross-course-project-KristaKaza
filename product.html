@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -30,16 +31,18 @@
             <li><a href="info.html">INFO</a></li>
         </ul>
         </nav>
-        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="text" name="search" placeholder="Search..">
+        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user icon"></a>
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
         </form>
     </header>
+</body>
     <main>
     <hr class="hr1">
     <div class="flexbox-container-men">
-            <img class="flexbox-item flexbox-men" src="images/RainyDays_Jacket6.png" alt="black-jacket"></a>
+            <img class="flexbox-item flexbox-men" src="images/product-jacket.png" alt="black jacket"></a>
         <div class="flexbox-description-men">
             <h1>MEN'S</h1>
             <h2>Snowboard Jacket Pro-X</h2>
@@ -63,32 +66,25 @@
         <h2>Similar Products</h2>
         </div>
         <div class="similar-products">
-            <img src="images/RainyDays_Jacket2.png" alt="jacket-black">
-            <img src="images/RainyDays_Jacket3.png" alt="red-jacket">
-            <img src="images/RainyDays_Jacket4.png" alt="black-white">
-            <img src="images/RainyDays_Jacket7.png" alt="green-jacket">
-        </div>
-        <div class="view-details">
-            <h3>Click to view details</h3>
-            <h3>Click to view details</h3>
-            <h3>Click to view details</h3>
-            <h3>Click to view details</h3>
-        </div>
+            <img src="images/black-white.png" alt="black grey jacket">
+            <img src="images/redjacket.png" alt="red jacket">
+            <img src="images/orange-grey-jacket.png" alt="black and white jacket">
+            <img src="images/greenjacket.png" alt="green jacket">
         </div>
         <div class="reviews">
         <h2>Reviews</h2>
-        <p>1-5 of 20 Reviews</p> 
+        <h3>1-5 of 20 Reviews</h3> 
         <hr>
-        <p>Harry</p>
-        <p>Great jacket! I use it everytime to do my winter sports and im very happy with it! Definetely recommended!</p>
+        <h3>Harry</h3>
+        <h4>Great jacket! I use it everytime to do my winter sports and im very happy with it! Definetely recommended!</h4>
         <hr>
-        <p>Maria</p>
-        <p>Got this jacket for my boyfriend and he absolutely loved it! It's so stylish and warm at the same time. 5/5!! </p>
+        <h3>Maria</h3>
+        <h4>Got this jacket for my boyfriend and he absolutely loved it! It's so stylish and warm at the same time. 5/5!! </h4>
         </div>
     </main>
     <footer>
         <div class="logo-footer">
-          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+          <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <div class="footer-title">
           <h2>Checkout / Rainydays</h2>
@@ -98,8 +94,10 @@
             earn points from any order, sign up and join in on exclusive adventures and events.</div>
             <button class="sign-up">Sign up</button>
             <div>Subscribe to our newsletter</div>
-            <form action="">
+            <form action="#">
+                <label for="email">
                 <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+                </label>
             </form>
     </div>
     <div class="footer-container1">

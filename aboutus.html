@@ -18,10 +18,11 @@
 <body>
     <header class="header">
         <div class="logo">
-        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+        <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
         </div>
         <nav class="navigation">
-        <input type="checkbox" class="toggle-menu">
+            <input type="checkbox" id="checkbox" class="toggle-menu">
+            <label for="checkbox" class="hidden-label">checkbox</label>      
         <div class="hamburger"></div>
         <ul class="menu">
             <li><a href="men.html" class="active">MEN</a></li>
@@ -30,55 +31,52 @@
             <li><a href="info.html">INFO</a></li>
         </ul>
         </nav>
-        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user-icon"></a>
-        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping-bag">
-        <form class="search-bar">
-            <input type="text" name="search" placeholder="Search..">
+        <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon" src="images/user.png" alt="user icon"></a>
+        <img class="shopping-bag" src="images/shop-bag.png" alt="shopping bag icon">
+        <label for="search" class="hidden-label">search</label>
+        <form class="search">
+          <input type="text" id="search" name="search" placeholder="Search..">
         </form>
     </header>
+</body>
     <main>
         <hr class="hr1">
         <div class="about-us-container">
          <div class="img-about-us">
-            <img src="images/male-snowboarder-doing-tricks-air-ski-resort.jpg" alt="male-snowboarder-doing-tricks-in-air">
-            <div class="about-us-text">
-                <h1>About Us</h1>
+            <img src="images/male-snowboarder-doing-tricks-air-ski-resort.jpg" alt="male snowboarder doing tricks in air">
+                <h1 class="about-title">About Us</h1>
+                <div class="about-paragraph">
                 <p>At Rainydays, we believe that every outdoor excursion should be accompanied by top-notch gear that's both functional and stylish. <br><br>
-                Our team of passionate outdoors enthusiasts and experienced designers have come together to create a range of jackets that cater to the needs of all types of adventurers - from weekend hikers to professional mountaineers. Each jacket is carefully crafted using the latest technology and materials to ensure that it offers maximum protection from the elements while being lightweight and comfortable to wear. <br><br>
-                 We believe that the great outdoors should be accessible to everyone, and that's why we've made it our mission to offer top-quality jackets at an affordable price. Whether you're scaling a mountain, camping in the woods, or just taking a leisurely walk, our jackets will keep you warm, dry, and stylish.</p>
+                <p>Our team of passionate outdoors enthusiasts and experienced designers have come together to create a range of jackets that cater to the needs of all types of adventurers - from weekend hikers to professional mountaineers.</p>
+                <p> Each jacket is carefully crafted using the latest technology and materials to ensure that it offers maximum protection from the elements while being lightweight and comfortable to wear.</p>
             </div>
         </div>
     </div>
         <div class="our-blog-container">
-            <div class="img-our-blog">
-            <img src="images/celebrating-skiers-standing-snow-covered-mountain.jpg" alt="skiers-celebrating-on-mountain">
         <div class="our-blog-text">
             <h1>Our Blog</h1>
             <p>We love seeing you enjoying outdoors while being stylish and wearing our collections!<br>
                 In our blog you will find photos of our subscribers, events and our social media. <br><br> Take a photo of you and your favourite jacket and <span class="post">post it here</span> to join our community.</p>
+                <h1 class="follow-us-social">Follow us on our social media for more!</h1>
+            <div class="social-media">
+            <i class="fa-brands fa-facebook-f fa-s"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            </div>
          </div>
+         <img class="flexbox-img-1-blog" src="images/celebrating-skiers-standing-snow-covered-mountain.jpg" alt="celebrating-skiers">
          </div>
      </div>
      <div class="our-blog-flexbox">
-        <img class="flexbox-img-1-blog" src="images/celebrating-skiers-standing-snow-covered-mountain (1).jpg" alt="celebrating-skiers">
-        <img class="flexbox-img-2-blog" src="images/group-skiers-having-fun-ski-resort.jpg" alt="skiers-having-fun">
-     </div>
-     <div class="our-blog-container-2">
-        <img src="images/hikers-mountains.jpg" alt="hikers-standing-on-top-of-the-mountain">
-        <h1 id="follow-us-social">Follow us on our social media for more!</h1>
-        <div class="social-media">
-            <i class="fa-brands fa-facebook-f fa-s" style="color: #185368;"></i>
-            <i class="fa-brands fa-twitter" style="color: #185368;"></i>
-            <i class="fa-brands fa-youtube" style="color: #185368;"></i>
-            <i class="fa-brands fa-instagram" style="color: #185368;"></i>
-            <i class="fa-brands fa-linkedin" style="color: #185368;"></i>
-
-        </div>
+         <img src="images/group-skiers-having-fun-ski-resort.jpg" alt="skiers having fun">
+        <img class="img-crop" src="images/hikers-mountains.jpg" alt="hikers standing on top of the mountain">
      </div>
 </main>
 <footer>
     <div class="logo-footer">
-      <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays-Logo"></a>
+      <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
     </div>
     <div class="footer-title">
       <h2>About Us / Rainydays</h2>
@@ -88,8 +86,10 @@
         earn points from any order, sign up and join in on exclusive adventures and events.</div>
         <button class="sign-up">Sign up</button>
         <div>Subscribe to our newsletter</div>
-        <form action="">
-            <input type="" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+        <form action="#">
+            <label for="email">
+            <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
+            </label>
         </form>
 </div>
 <div class="footer-container1">
