@@ -56,20 +56,19 @@
             </div>
         <div class="delivery">
             <fieldset>
+                <legend>Delivery Options</legend>
                 <div class="radio-group">
-              <div class="radio-container">
-                <input type="radio" name="delivery-options" id="pickup" value="pickup" required>
-                <legend class="choice">Pickup point</legend>
-                <label for="pickup">Free - Delivered between 1 to 4 business days.</label>
-                <input type="radio" name="delivery-options" id="door-delivery" value="door-delivery" required>
-                <legend class="choice">Door delivery</legend>
-                <label for="door-delivery"> 69 NOK - Delivered between 1 to 4 business days.</label>
-                <input type="radio" name="delivery-options" id="store-pickup" value="store-pickup" required>
-                <legend class="choice">Store pickup</legend>
-                <label for="store-pickup">Free - Delivered between 1 to 3 business days.</label> 
-              </div>
-            </div>
-        </fieldset>
+                  <div class="radio-container">
+                    <input type="radio" name="delivery-options" id="pickup" value="pickup" required>
+                    <label for="pickup">Pickup point - Free - Delivered between 1 to 4 business days.</label>
+                    <input type="radio" name="delivery-options" id="door-delivery" value="door-delivery" required>
+                    <label for="door-delivery">Door delivery - 69 NOK - Delivered between 1 to 4 business days.</label>
+                    <input type="radio" name="delivery-options" id="store-pickup" value="store-pickup" required>
+                    <label for="store-pickup">Store pickup - Free - Delivered between 1 to 3 business days.</label> 
+                  </div>
+                </div>
+              </fieldset>
+              
           </div>   
           <div class="payment-info">
             <h2 class="payment-title">Payment</h2>
@@ -107,7 +106,11 @@
          <div class="total-payment">
             <h4 class="total">Total</h4> <br>
             <h4 class="total-price"> 1700kr</h4>
-            <a href="confirm-payment.html"><button class="confirm-payment">Confirm Payment</button></a> 
+            <div>
+                <button class="confirm-payment">
+                  <a href="confirm-payment.html">Confirm Payment</a>
+                </button>
+              </div>              
             <div class="cards"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i>
             </div>
          </div>
@@ -134,13 +137,12 @@
             </div>
          </div>
         </main>
-    </body>
         <footer>
             <div class="logo-footer">
               <a href="index.html"><img src="images/RainyDays_Logo.png" alt="Rainydays Logo"></a>
             </div>
             <div class="footer-title">
-              <h2>Checkout / Rainydays</h2>
+              <h2>Home / Rainydays</h2>
             </div>
         <div class="subscribe-box">
             <div class="warranty-text">Rainydays offer you a 3 year warranty,
@@ -149,9 +151,10 @@
                 <div>Subscribe to our newsletter</div>
                 <form action="#">
                     <label for="email">
-                    <input type="email" name="email" id="email"  placeholder="name@example.com"><button class="submit-footer">Submit</button>
-                </label>
-                </form>
+                      <input type="email" name="email" id="email" placeholder="name@example.com">
+                      <button class="submit-footer">Submit</button>
+                    </label>
+                  </form>              
         </div>
         <div class="footer-container1">
         <div>
@@ -210,8 +213,8 @@
                     <li>LinkedIn</li>
                 </ul>
             </div>
-                </div>
-    <div class="copyright">© 2023 Rainydays,NO 123 456 2345 MVA</div>
+        </div>
+    <div class="copyright">© 2023 Rainydays,NO 123 456 2345 MVA</div> 
         </footer>
-</body>
-</html>
+    </body>
+    </html>

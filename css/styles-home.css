@@ -146,6 +146,10 @@
   font-size: 2.0rem;
   width: 327px;
   height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .btn-winter:hover {

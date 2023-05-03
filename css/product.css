@@ -54,6 +54,11 @@
     color: #185361;
 }
 
+.go-to-checkout a {
+  text-decoration: none;
+  color: #185361;
+}
+
 .go-to-checkout, .add-to-bag-men {
     padding: 25px 35px 25px 35px;
     font-size: 33px;
@@ -68,7 +73,10 @@
 
 .go-to-checkout:hover {
     background-color: #0099A3;
-    color: white;
+}
+
+.go-to-checkout a:hover {
+  color: white;
 }
 
 .description-jacket {

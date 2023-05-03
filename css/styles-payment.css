@@ -177,6 +177,7 @@ input[type="radio"] {
   background-color: #185361;
   font-size: 30px;
   font-weight: 100;
+  text-decoration: none;
 }
 
 .confirm-payment a {
