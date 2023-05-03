@@ -84,36 +84,48 @@
             </fieldset>
         </div>
         <div class="payment-details">
-            <div class="details-container">
+          <div class="details-container">
             <form action="#">
                 <label for="name-on-card">Name on card *</label>
-            <input type="text" name="name-on-card" id="name-on-card" required>
-            </div>
+                <input type="text" name="name-on-card" id="name-on-card" required>
+            </form>
+        </div>        
             <div class="details-container">
+              <form action="#">
                 <label for="card-number">Card number*</label>
             <input type="text" name="card-number" id="card-number" required>
+          </form>
             </div>
             <div class="details-container">
+              <form action="#">
                 <label for="expiry-date">Expiry date *</label>
-            <input type="number" name="expiry-date" id="expiry-date" required> 
+            <input type="number" name="expiry-date" id="expiry-date" required>
+              </form> 
             </div>
             <div class="details-container">
+              <form action="#">
                 <label for="cvc">CVC *</label>
             <input type="number" name="cvc" id="cvc" required>
+              </form>
             </div>
-        </form>
          </div>
          <div class="total-payment">
-            <h4 class="total">Total</h4> <br>
-            <h4 class="total-price"> 1700kr</h4>
-            <div>
-                <button class="confirm-payment">
-                  <a href="confirm-payment.html">Confirm Payment</a>
-                </button>
-              </div>              
-            <div class="cards"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i>
-            </div>
-         </div>
+          <h4 class="total">Total</h4> <br>
+          <h4 class="total-price"> 1700kr</h4>
+          <div>
+            <a href="confirm-payment.html">
+              <button class="confirm-payment">
+                Confirm Payment
+              </button>
+            </a>
+          </div>              
+          <div class="cards">
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+            <i class="fa-brands fa-cc-paypal"></i>
+          </div>
+        </div>        
          <div class="order-summary-container">
             <div class="order-summary">
                 <h1 class="order-title">Order Summary</h1>

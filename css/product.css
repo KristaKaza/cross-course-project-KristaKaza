@@ -50,13 +50,9 @@
 }
 
 .go-to-checkout {
-    background-color: white;
-    color: #185361;
-}
-
-.go-to-checkout a {
-  text-decoration: none;
+  background-color: white;
   color: #185361;
+  text-decoration: none;
 }
 
 .go-to-checkout, .add-to-bag-men {
@@ -75,7 +71,7 @@
     background-color: #0099A3;
 }
 
-.go-to-checkout a:hover {
+.go-to-checkout:hover {
   color: white;
 }
 
