@@ -1,204 +1,182 @@
-.flexbox-men{
-    width: 40%;
-    background: rgba(217, 217, 217, 0.26);
-    padding: 50px;
-    border-radius: 20px;
+.flexbox-men {
+  width: 40%;
+  background: rgba(217, 217, 217, 0.26);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.flexbox-size {
+  display: flex;
+  flex-direction: row;
+  border: none;
+  column-gap: 16px;
+}
+
+.flexbox-item {
+  width: 40%;
 }
 
 .flexbox-container-men {
-    display: flex;
-    align-items: stretch;
-    position: relative;
-    padding-left: 160px;
-    padding-top: 65px;
+  display: flex;
+  align-items: stretch;
+  padding: 80px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .flexbox-description-men {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: center;
-    padding-left: 147px;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 42px;
+  padding: 17px;
+  width: 40em;
+  justify-content: space-evenly;
 }
 
-.flexbox-description-men h2,h3  {
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 400;
-    word-spacing: 10px;
-    line-height: 40px;
-    padding-left: 20px;
+.flexbox-description-men h2 {
+  font-size: 30px;
 }
 
 .flexbox-description-men hr {
-    width: 100%;
+  width: 100%;
 }
 
-.btn-container-men {
-    display: inline-flex;
-    flex-direction: row;
-    column-gap: 60px;
-    align-content: center;
-    justify-content: center;
-    align-items: stretch;
-}
-
-.add-to-bag-men {
-    background-color: #185361;
-    color: white;
-}
-
-.go-to-checkout {
-  background-color: white;
-  color: #185361;
+a:hover {
+  background-color: #0099a3;
+  color: white;
   text-decoration: none;
+  transition: 0.5s;
 }
 
-.go-to-checkout, .add-to-bag-men {
-    padding: 25px 35px 25px 35px;
-    font-size: 33px;
-    border: 1px #185361 solid;
-    border-radius: 10px;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.add-to-bag-men:hover {
-    background-color: #0099A3;
-    color: white;
+button {
+  padding: 11px 25px 11px 25px;
+  font-size: 26px;
+  border: 1px #185361 solid;
+  border-radius: 10px;
+  background-color: white;
 }
 
-.go-to-checkout:hover {
-    background-color: #0099A3;
+button:hover {
+  background-color: #0099a3;
 }
 
-.go-to-checkout:hover {
+input {
+  display: none;
+}
+
+label {
+  width: auto;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 0;
+}
+
+input:checked + label {
+  background-color: #185361;
   color: white;
 }
 
-.description-jacket {
-    padding-top: 30px;
-    padding-left: 160px;
-    line-height: 60px;
-    padding-bottom: 20px;
-    font-size: 25px;
-}
-
-.similar-products img {
-    background-color: rgba(217, 217, 217, 0.26);
-    border-radius: 10px;
-    width: 15%;
-    padding: 20px;
-}
-
-.similar-products {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: stretch;
-    flex-direction: row;
-    padding: 20px;
-}
-
-.view-details {
-    display: inline-flex;
-    gap: 224px;
-    font-size: 19px;
-    text-decoration: underline;
-    flex-direction: row;
-    padding-left: 153px;
+input + label:hover {
+  background-color: #185361;
+  color: white;
+  transition: 0.4s;
 }
 
 .reviews {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    line-height: 50px;
-    border: 1px solid rgba(14, 73, 87, 1);
-    letter-spacing: 1px;
-    width: fit-content;
-    font-size: 22px;
-    position: relative;
-    padding: 63px;
-    margin: 109px;
-    color: rgba(14, 73, 87, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  border: 1px solid rgba(14, 73, 87, 1);
+  letter-spacing: 1px;
+  width: fit-content;
+  font-size: 18px;
+  padding: 43px;
+  margin: 2em 18em;
+  border-radius: 12px;
+  color: rgba(14, 73, 87, 1);
 }
 
 @media screen and (max-width: 900px) {
-    .flexbox-men {
-        width: 100%;
-        padding: 20px;
-        margin-bottom: 20px;
-        margin-left: 6px;
-    }
-    
-    .flexbox-container-men {
-      flex-direction: column;
-      padding: 30px;
-    }
-    
-    .flexbox-description-men {
-      padding-left: 0px;
-    }
-    
-    .flexbox-description-men h2, .flexbox-description-men h3 {
-      font-size: 25px;
-      line-height: 35px;
-      text-align: center;
-      padding: 10px;
-    }
-    
-    .flexbox-description-men hr {
-      width: 100%;
-    }
-    
-    .btn-container-men {
-      flex-direction: column;
-      row-gap: 20px;
-      margin-top: 20px;
-    }
-    
-    .add-to-bag-men, .go-to-checkout {
-      font-size: 25px;
-      padding: 20px;
-      margin-bottom: 20px;
-    }
-    
-    .description-jacket {
-        padding: 20px;
-        text-align: center;
-        font-size: 24px;
-    }
-    
-    .similar-products {
-        flex-direction: row;
-        align-items: stretch;
-        overflow-x: auto;
-        justify-content: flex-start;
-        white-space: nowrap;
-        column-gap: 5px;
-        padding: 9px 34px;
-    }
-        
-    .similar-products img {
-      flex-shrink: 0;
-    }
-
-    .similar-products img {
-      width: 50%;
-      padding: 10px;
-    }
-    
-    .view-details {
-      display: none;
-    }
-    
-    .reviews {
-      width: 100%;
-      margin: 0;
-      padding: 20px;
-      font-size: 20px;
-      line-height: 30px;
-    }
+  .flexbox-men {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 6px;
   }
-  
+
+  .flexbox-description-men {
+    padding-left: 0px;
+  }
+
+  h1,
+  .flexbox-description-men h2 {
+    font-size: 18px;
+  }
+
+  .flexbox-description-men hr {
+    width: 100%;
+  }
+
+  .btn-container-men {
+    flex-direction: column;
+    row-gap: 20px;
+    margin-top: 20px;
+  }
+
+  .add-to-bag-men,
+  .go-to-checkout {
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .description-jacket {
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .similar-products {
+    flex-direction: row;
+    align-items: stretch;
+    overflow-x: auto;
+    justify-content: flex-start;
+    white-space: nowrap;
+    column-gap: 5px;
+    padding: 9px 34px;
+  }
+
+  .similar-products img {
+    flex-shrink: 0;
+  }
+
+  .similar-products img {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .view-details {
+    display: none;
+  }
+
+  .reviews {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
