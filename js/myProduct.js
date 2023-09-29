@@ -31,6 +31,9 @@ async function fetchJacketDetail() {
   const titleContainer = document.getElementById("title");
   titleContainer.textContent = title;
 
+  const buttonDiv = document.createElement("div");
+  buttonDiv.classList.add("button-div");
+
   productDetailContainer.innerHTML = "";
 
   productDetailContainer.innerHTML += `<div class="flexbox-container-men">
@@ -71,8 +74,8 @@ async function fetchJacketDetail() {
 <h2>NOK ${productDetail.price}</h2>
  <hr class="hr1">
 
-<button><a href="#" class="addToBag", "addToBagMenHover", "btn-container">ADD TO BAG</a></button>
-<button><a href="/html/payment.html" class="goToCheckout", "goToCheckoutHover", "btn-container">CHECKOUT</a></button>
+<div class=button-div><button><a href="#" class="addToBag", "addToBagMenHover", "btn-container">ADD TO BAG</a></button>
+<button><a href="/html/payment.html" class="goToCheckout", "goToCheckoutHover", "btn-container">CHECKOUT</a></button></div>
 
 
 <p>${productDetail.description}</p>

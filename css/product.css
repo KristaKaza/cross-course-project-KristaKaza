@@ -33,6 +33,7 @@
   padding: 17px;
   width: 40em;
   justify-content: space-evenly;
+  row-gap: 15px;
 }
 
 .flexbox-description-men h2 {
@@ -53,6 +54,17 @@ a:hover {
 a {
   text-decoration: none;
   color: black;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 35px;
+}
+
+.flexbox-container-men p {
+  font-size: 22px;
 }
 
 button {
@@ -110,37 +122,46 @@ input + label:hover {
 }
 
 @media screen and (max-width: 900px) {
-  .flexbox-men {
+  .flexbox-item {
     width: 100%;
+  }
+
+  .flexbox-container-men {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 20px;
-    margin-bottom: 20px;
-    margin-left: 6px;
-  }
-
-  .flexbox-description-men {
-    padding-left: 0px;
-  }
-
-  h1,
-  .flexbox-description-men h2 {
-    font-size: 18px;
+    width: auto;
   }
 
   .flexbox-description-men hr {
     width: 100%;
+    margin: 15px;
   }
 
-  .btn-container-men {
-    flex-direction: column;
-    row-gap: 20px;
-    margin-top: 20px;
+  .flexbox-description-men h2 {
+    font-size: 40px;
+    margin: 15px;
   }
 
-  .add-to-bag-men,
-  .go-to-checkout {
+  .flexbox-container-men h1 {
     font-size: 25px;
-    padding: 20px;
-    margin-bottom: 20px;
+  }
+
+  .flexbox-size {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    column-gap: 16px;
+    row-gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .button-div {
+    row-gap: 10px;
+    margin: 15px;
   }
 
   .description-jacket {

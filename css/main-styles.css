@@ -233,33 +233,46 @@ input[type="text"] {
 
 /* flexbox-jackets */
 
-.flexbox-description img,
-.flexbox-description-hiking-section img,
-.flexbox-description-canoeing-section img {
+.flexbox-description img {
   max-width: 100%;
   max-height: 235px;
   object-fit: contain;
   flex: 1;
 }
 
-.flexbox-description p,
-hr {
+.flexbox-description p {
   margin-top: 10px;
   font-size: 20px;
   font-weight: 400;
   line-height: 40px;
-  padding-left: 20px;
+  padding: 5px 31px 5px 31px;
 }
 
 .add-to-bag {
   color: #185361;
-  border: none;
-  background-color: transparent;
-  font-size: 17px;
-  text-align: end;
-  padding-right: 20px;
-  text-decoration: 1px solid underline #185361;
+  background-color: white;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 2px 20px;
+  margin: 20px;
 }
+
+.add-to-bag:hover {
+  background-color: #185361;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  .flexbox-description p {
+    padding: 10px;
+  }
+
+  .add-to-bag {
+    margin: 5px;
+  }
+}
+
 /* FOOTER */
 
 footer {

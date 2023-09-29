@@ -15,15 +15,10 @@
 
 .btn-men {
   background-color: #185361;
-  font-size: 20px;
-  padding: 20px 30px 20px 30px;
   border-color: #185361;
+  font-size: 22px;
+  padding: 20px 26px 20px 26px;
   color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .ski-title {
@@ -45,40 +40,7 @@
   justify-content: center;
 }
 
-.flexbox-container-hiking-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  position: relative;
-  column-gap: 40px;
-  top: 260px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  padding-left: 50px;
-}
-
-.flexbox-container-canoeing-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  position: relative;
-  column-gap: 40px;
-  top: 205px;
-  padding-left: 50px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-}
-
-.flexbox-container::-webkit-scrollbar,
-.flexbox-container-hiking-section::-webkit-scrollbar,
-.flexbox-container-canoeing-section::-webkit-scrollbar {
-  width: 10px;
-  background-color: transparent;
-}
-
-.flexbox-description,
-.flexbox-description-hiking-section,
-.flexbox-description-canoeing-section {
+.flexbox-description {
   display: flex;
   flex-direction: column;
   background: rgba(217, 217, 217, 0.26);
@@ -87,18 +49,8 @@
   border-radius: 11px;
   flex: 0 0 auto;
   width: 300px;
+  width: 22em;
   margin-right: 10px;
-}
-
-.flexbox-description-hiking-section p,
-hr,
-.flexbox-description-canoeing-section p,
-hr {
-  margin-top: 10px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 40px;
-  padding-left: 20px;
 }
 
 @media screen and (max-width: 992px) {
