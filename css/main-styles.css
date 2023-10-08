@@ -137,33 +137,37 @@ body {
   right: 0;
 }
 
-.login-container {
-  position: relative;
-  bottom: 34px;
+.icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-end;
+  column-gap: 13px;
+}
+
+.login {
   font-size: 17px;
   text-decoration: none;
-  left: 10px;
   color: black;
 }
 
-.user-icon {
-  width: 23px;
-  position: relative;
-  bottom: 32px;
-  left: 25px;
+.fa-solid {
+  font-size: 23px;
+  cursor: pointer;
 }
 
-.shopping-bag {
-  position: relative;
-  top: 15px;
-}
-
-.search {
-  position: absolute;
-  top: 57px;
-  right: 74px;
+.inline-bag-search {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
+  column-gap: 10px;
+}
+
+.log-in {
+  display: flex;
+  column-gap: 8px;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 
 .hidden-label {
@@ -171,7 +175,7 @@ body {
 }
 
 input[type="text"] {
-  padding: 10px 20px 10px 20px;
+  padding: 4px 6px 4px 6px;
 }
 
 @media screen and (max-width: 900px) {
@@ -229,6 +233,10 @@ input[type="text"] {
   .search {
     display: none;
   }
+
+  .login {
+    display: none;
+  }
 }
 
 /* flexbox-jackets */
@@ -256,6 +264,7 @@ input[type="text"] {
   border-radius: 4px;
   padding: 2px 20px;
   margin: 20px;
+  cursor: pointer;
 }
 
 .add-to-bag:hover {

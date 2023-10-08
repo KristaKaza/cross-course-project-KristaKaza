@@ -8,13 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/styles-home.css">
   <link rel="stylesheet" href="/css/main-styles.css">
-  <link rel="stylesheet" href="/css/styles-men.css">
+  <link rel="stylesheet" href="/css/shopping-bag.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/02eec3b74d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="/js/script.js" defer></script>
+  <script src="/js/shoppingBag.js" defer></script>
   <!-- Hotjar Tracking Code for https://subtle-moxie-88e118.netlify.app/ -->
   <script>
     (function (h, o, t, j, a, r) {
@@ -43,18 +44,64 @@
       <div class="hamburger"></div>
       <ul class="menu">
         <li><a href="/html/men.html" class="active">MEN</a></li>
-        <li><a href="#">WOMEN</a></li>
+        <li><a href="/html/women.html">WOMEN</a></li>
         <li><a href="/html/aboutus.html">ABOUT US</a></li>
         <li><a href="/html/info.html">INFO</a></li>
       </ul>
     </nav>
-    <a href="#" class="login-container">Login/Sign Up</a><a href="#" class="login-icon"><img class="user-icon"
-        src="/images/user.png" alt="user-icon"></a>
-    <img class="shopping-bag" src="/images/shop-bag.png" alt="shopping bag icon">
-    <label for="search" class="hidden-label">search</label>
-    <form class="search">
-      <input type="text" id="search" name="search" placeholder="Search..">
-    </form>
+    <div class="icons-container">
+      <div class="log-in">
+        <a href="#" class="login">Login/Sign Up</a><i class="fa-solid fa-user"></i>
+      </div>
+
+      <div class="box">
+        <div class="cart-count">0</div>
+        <i class="fa-solid fa-bag-shopping" id="cart-icon"></i>
+      </div>
+
+      <div class="cart">
+        <div class="title-close">
+          <div class="cart-title">Cart Items</div>
+          <i class="fa-solid fa-xmark" id="cart-close"></i>
+        </div>
+        <div class="cart-content">
+          <div class="cart-boxes" data-id="${item.id}">
+            <img src="https://static.cloud.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg" alt="jacket">
+            <div class="detail-box">
+              <div class="cart-jacket-title">Rainy Days Thunderbolt Jacket</div>
+              <div class="price-box">
+                <div class="cart-price">1000 NOK</div>
+                <div class="cart-amt">1000 NOK</div>
+              </div>
+              <input type="number" value="1" class="cart-quantity" name="quantity1">
+            </div>
+            <i class="fa-regular fa-trash-can" id="cart-remove"></i>
+          </div>
+
+          <div class="cart-boxes" data-id="${item.id}">
+            <img src="https://static.cloud.noroff.dev/api/rainy-days/9-thunderbolt-jacket.jpg" alt="jacket">
+            <div class="detail-box">
+              <div class="cart-jacket-title">Rainy Days Thunderbolt Jacket</div>
+              <div class="price-box">
+                <div class="cart-price">2000 NOK</div>
+                <div class="cart-amt">2000 NOK</div>
+              </div>
+              <div class="inline-trash"></div>
+              <input type="number" value="1" class="cart-quantity" name="quantity2">
+            </div>
+            <i class="fa-regular fa-trash-can" id="cart-remove"></i>
+          </div>
+        </div>
+        <div class="cart-summary">
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">0 NOK</div>
+          </div>
+          <button class="btn-buy">Place Order</button>
+        </div>
+        <div class="empty-cart-message">
+          Your cart is empty.
+        </div>
   </header>
   <main>
     <hr class="hr1">

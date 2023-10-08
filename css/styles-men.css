@@ -49,8 +49,8 @@
   border-radius: 11px;
   flex: 0 0 auto;
   width: 300px;
-  width: 22em;
-  margin-right: 10px;
+  width: 21em;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 992px) {

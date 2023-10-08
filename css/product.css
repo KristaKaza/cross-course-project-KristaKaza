@@ -73,6 +73,7 @@ button {
   border: 1px #185361 solid;
   border-radius: 10px;
   background-color: white;
+  cursor: pointer;
 }
 
 button:hover {
@@ -92,6 +93,7 @@ label {
   border: 1px solid black;
   border-radius: 4px;
   margin: 0;
+  cursor: pointer;
 }
 
 input:checked + label {
