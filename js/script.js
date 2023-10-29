@@ -1,9 +1,11 @@
 const shoppingBagItems = [];
 
-const rainyDaysAPI = "https://api.noroff.dev/api/v1/rainy-days/";
+const corsAnywhereUrl = "https://noroffcors.onrender.com/";
+const originalUrl =
+  "https://rainydays-krista.n/wp-json/wc/store/products?per_page=20&fbclid=IwAR0NR5Jy0zw8dtJpB3DVSLRoMyy088R8Oa3_xoDG5HWC5Dl_ROg-PJFwTO8";
+const rainydaysAPI = corsAnywhereUrl + originalUrl;
 const getJacketText = document.querySelectorAll(".jacketText");
 
-// Modify the createCartItemHTML function
 function createCartItemHTML(item) {
   return `
     <div class="cart-boxes">
@@ -172,9 +174,7 @@ function addToShoppingBag(product) {
   updateCartDisplay();
 }
 
-// Event listeners
 document.addEventListener("DOMContentLoaded", () => {
-  displayJackets();
   updateCartDisplay();
 });
 
@@ -194,7 +194,7 @@ document.addEventListener("change", (event) => {
   }
 });
 
-// Add a click event listener for the cart item title
+// click event listener for the cart item title
 document.addEventListener("click", (event) => {
   if (event.target.classList.contains("cart-jacket-title")) {
     const itemId = event.target.getAttribute("data-id");
@@ -207,7 +207,7 @@ document.addEventListener("click", (event) => {
 
 // Function to load jackets from the API
 async function getJackets() {
-  const response = await fetch(rainyDaysAPI);
+  const response = await fetch(rainydaysAPI);
   const results = await response.json();
   return results;
 }
@@ -215,6 +215,7 @@ async function getJackets() {
 // Function to display jackets on the page
 async function displayJackets() {
   const jackets = await getJackets();
+  console.log(jackets);
   const productContainer = document.getElementById("product-container");
 
   productContainer.innerHTML = "";
@@ -258,3 +259,4 @@ async function displayJackets() {
     }
   }
 }
+displayJackets();

@@ -20,7 +20,8 @@ async function fetchJacketDetail() {
   }
 
   const response = await fetch(
-    `https://api.noroff.dev/api/v1/rainy-days/${jacketId}`
+    `https://rainydays-krista.no/wp-json/wc/store/products?per_page=20&fbclid=IwAR0NR5Jy0zw8dtJpB3DVSLRoMyy088R8Oa3_xoDG5HWC5Dl_ROg-PJFwTO8
+    ${jacketId}`
   );
 
   const addToBagMen = document.createElement("a");
