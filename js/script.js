@@ -1,10 +1,22 @@
 const shoppingBagItems = [];
 
 const corsAnywhereUrl = "https://noroffcors.onrender.com/";
-const originalUrl =
-  "https://rainydays-krista.n/wp-json/wc/store/products?per_page=20&fbclid=IwAR0NR5Jy0zw8dtJpB3DVSLRoMyy088R8Oa3_xoDG5HWC5Dl_ROg-PJFwTO8";
+const originalUrl = "https://www.rainydays-noroff.no/wp-json/wp/v2/product";
 const rainydaysAPI = corsAnywhereUrl + originalUrl;
+
 const getJacketText = document.querySelectorAll(".jacketText");
+
+async function fetchProductData() {
+  try {
+    const response = await fetch(rainydaysAPI);
+    const products = await response.json();
+
+    return products;
+  } catch (error) {
+    console.error("Error fetching product data:", error);
+    return [];
+  }
+}
 
 function createCartItemHTML(item) {
   return `
@@ -75,10 +87,10 @@ function updateCartDisplay() {
   // Check if there are no items in the cart
   if (updatedItems.length === 0) {
     emptyCartMessage.style.display = "block";
-    cartSummaryContainer.style.display = "none"; // Hide the cart summary
+    cartSummaryContainer.style.display = "none";
   } else {
     emptyCartMessage.style.display = "none";
-    cartSummaryContainer.style.display = "block"; // Show the cart summary
+    cartSummaryContainer.style.display = "block";
   }
 
   updateCartCount();
@@ -99,7 +111,6 @@ function updateTotal() {
     total += price * qty;
   });
 
-  // Round the total to 0 decimal places and set it as text content
   totalValue.textContent = "NOK " + total.toFixed(0);
 
   // Update the cart count (you can implement this part)
@@ -115,7 +126,7 @@ function updateTotal() {
 
   if (itemsWithQuantityZero.length > 0) {
     itemsWithQuantityZero.forEach((item) => {
-      item.remove(); // Remove items with quantity <= 0 from the cart
+      item.remove();
     });
   }
 
@@ -134,17 +145,15 @@ function removeItemFromCart(itemId) {
   if (itemIndex !== -1) {
     const itemToRemove = shoppingBagItems[itemIndex];
     if (itemToRemove.quantity > 0) {
-      itemToRemove.quantity--; // Decrease the quantity
+      itemToRemove.quantity--;
       if (itemToRemove.quantity === 0) {
-        // If quantity becomes 0, remove the item from the shopping bag
         shoppingBagItems.splice(itemIndex, 1);
       }
     }
-    updateCartDisplay(); // Update the cart display
+    updateCartDisplay();
   }
 }
 
-// Function to add an item to the shopping bag
 function addToShoppingBag(product) {
   const existingItem = shoppingBagItems.find((item) => item.id === product.id);
   if (existingItem) {
@@ -205,58 +214,100 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// Function to load jackets from the API
-async function getJackets() {
-  const response = await fetch(rainydaysAPI);
-  const results = await response.json();
-  return results;
-}
+// Function to fetch the image URL based on media ID
+async function fetchImage(mediaId) {
+  try {
+    const response = await fetch(
+      `https://www.rainydays-noroff.no/wp-json/wp/v2/media/${mediaId}`
+    );
 
-// Function to display jackets on the page
-async function displayJackets() {
-  const jackets = await getJackets();
-  console.log(jackets);
-  const productContainer = document.getElementById("product-container");
-
-  productContainer.innerHTML = "";
-
-  for (let i = 0; i < jackets.length; i++) {
-    const jacket = jackets[i];
-
-    if (jacket.tags) {
-      const productDiv = document.createElement("div");
-      productDiv.classList.add("flexbox-description");
-      productDiv.addEventListener("click", () => {
-        window.location.href = `/html/product.html?id=${jacket.id}&title=${jacket.title}`;
-      });
-
-      const image = document.createElement("img");
-      image.src = jacket.image;
-      image.alt = jacket.description;
-      image.classList.add("flexbox-item", "flexbox-item-1");
-
-      const jacketTitle = document.createElement("p");
-      jacketTitle.innerHTML = `${jacket.title}`;
-
-      const jacketPrice = document.createElement("p");
-      jacketPrice.classList.add("price");
-      jacketPrice.innerHTML = `NOK ${jacket.price}`;
-
-      const addToBag = document.createElement("p");
-      addToBag.classList.add("add-to-bag");
-      addToBag.textContent = "Add to Bag";
-
-      addToBag.addEventListener("click", (event) => {
-        event.stopPropagation();
-        addToShoppingBag(jacket);
-      });
-
-      productContainer.appendChild(productDiv);
-      productDiv.appendChild(image);
-      productDiv.appendChild(jacketTitle);
-      productDiv.appendChild(jacketPrice);
-      productDiv.appendChild(addToBag);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
+
+    const mediaData = await response.json();
+    const imageUrl = mediaData.media_details.sizes.medium.source_url;
+    return imageUrl;
+  } catch (error) {
+    console.error("Error fetching image:", error);
+    return "";
   }
 }
-displayJackets();
+
+// Function to display jackets on the webpage
+async function displayJackets() {
+  try {
+    const products = await fetchProductData();
+
+    const productsList = document.getElementById("flexbox-container");
+
+    productsList.innerHTML = "";
+
+    if (products && products.length > 0) {
+      for (const product of products) {
+        const productDiv = document.createElement("div");
+        productDiv.classList.add("flexbox-description");
+
+        const image = document.createElement("img");
+        image.alt = product.title.rendered;
+
+        // Fetch the image URL and set it as the image source
+        const imageUrl = await fetchImage(product.featured_media);
+        image.src = imageUrl;
+
+        const title = document.createElement("p");
+        title.textContent = product.title.rendered;
+
+        const excerpt = document.createElement("p");
+        excerpt.innerHTML = product.excerpt.rendered;
+
+        const price = document.createElement("p");
+        price.textContent = `Price: ${product.price} NOK`;
+
+        const addToCartBtn = document.createElement("p");
+        addToCartBtn.textContent = "Add to Bag";
+        addToCartBtn.addEventListener("click", () => {
+          addToShoppingBag(product);
+        });
+
+        productDiv.appendChild(image);
+        productDiv.appendChild(title);
+        productDiv.appendChild(excerpt);
+        productDiv.appendChild(price);
+        productDiv.appendChild(addToCartBtn);
+
+        // Add click event listener to open the product's details page
+        productDiv.addEventListener("click", () => {
+          // Redirect to the product details page passing product ID and title
+          window.location.href = `/html/product.html?id=${product.id}&title=${product.title.rendered}`;
+        });
+
+        productsList.appendChild(productDiv);
+      }
+    } else {
+      productsList.textContent = "No products available.";
+    }
+  } catch (error) {
+    console.error("Error displaying products:", error);
+  }
+}
+
+// Event listener for the DOMContentLoaded event
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const productsList = document.getElementById("flexbox-container");
+
+    if (!productsList) {
+      console.error("Error: flexbox-container not found in the document.");
+      return;
+    }
+
+    // Call the displayJackets function to show products
+    await displayJackets();
+  } catch (error) {
+    console.error("Error displaying products:", error);
+  }
+});
+
+// Call window.onload to start displaying jackets when the window is loaded
+window.onload = displayJackets;

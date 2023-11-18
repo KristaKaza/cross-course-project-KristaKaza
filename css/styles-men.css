@@ -29,7 +29,7 @@
   letter-spacing: 1px;
 }
 
-.flexbox-container {
+#flexbox-container {
   display: flex;
   align-items: stretch;
   row-gap: 32px;
