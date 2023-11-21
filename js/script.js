@@ -6,15 +6,15 @@ const rainydaysAPI = corsAnywhereUrl + originalUrl;
 
 const getJacketText = document.querySelectorAll(".jacketText");
 
-async function fetchProductData() {
+async function fetchSingleProductData(productId) {
+  const singleProductUrl = `https://noroffcors.onrender.com/https://www.rainydays-noroff.no/wp-json/wp/v2/product/${productId}`;
   try {
-    const response = await fetch(rainydaysAPI);
-    const products = await response.json();
-
-    return products;
+    const response = await fetch(singleProductUrl);
+    const product = await response.json();
+    return product;
   } catch (error) {
-    console.error("Error fetching product data:", error);
-    return [];
+    console.error("Error fetching single product data:", error);
+    return null;
   }
 }
 
@@ -214,25 +214,35 @@ document.addEventListener("click", (event) => {
   }
 });
 
-// Function to fetch the image URL based on media ID
 async function fetchImage(mediaId) {
   try {
-    const response = await fetch(
-      `https://www.rainydays-noroff.no/wp-json/wp/v2/media/${mediaId}`
-    );
-
+    const imageUrl = `https://noroffcors.onrender.com/https://www.rainydays-noroff.no/wp-json/wp/v2/media/${mediaId}`;
+    const response = await fetch(imageUrl);
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-
     const mediaData = await response.json();
-    const imageUrl = mediaData.media_details.sizes.medium.source_url;
-    return imageUrl;
+    const imageSrc = mediaData.media_details.sizes.medium.source_url;
+    return imageSrc;
   } catch (error) {
     console.error("Error fetching image:", error);
     return "";
   }
 }
+
+// Function to fetch all products
+async function fetchProductData() {
+  const allProductsUrl = `https://noroffcors.onrender.com/https://www.rainydays-noroff.no/wp-json/wp/v2/product`;
+  try {
+    const response = await fetch(allProductsUrl);
+    const products = await response.json();
+    return products;
+  } catch (error) {
+    console.error("Error fetching all product data:", error);
+    return [];
+  }
+}
+fetchProductData();
 
 // Function to display jackets on the webpage
 async function displayJackets() {
@@ -262,11 +272,18 @@ async function displayJackets() {
         excerpt.innerHTML = product.excerpt.rendered;
 
         const price = document.createElement("p");
-        price.textContent = `Price: ${product.price} NOK`;
+        price.textContent = `${product.price} NOK`;
 
-        const addToCartBtn = document.createElement("p");
-        addToCartBtn.textContent = "Add to Bag";
-        addToCartBtn.addEventListener("click", () => {
+        const apiProduct = await fetchSingleProductData(product.id);
+        const apiPrice = apiProduct
+          ? apiProduct.price
+          : "https://noroffcors.onrender.com/https://www.rainydays-noroff.no/wp-json/wp/v2/product";
+
+        const addToBag = document.createElement("p");
+        addToBag.textContent = "Add to Bag";
+        addToBag.addEventListener("click", () => {
+          addToShoppingBag(product);
+          product.apiPrice = apiPrice;
           addToShoppingBag(product);
         });
 
@@ -274,11 +291,10 @@ async function displayJackets() {
         productDiv.appendChild(title);
         productDiv.appendChild(excerpt);
         productDiv.appendChild(price);
-        productDiv.appendChild(addToCartBtn);
+        productDiv.appendChild(addToBag);
 
         // Add click event listener to open the product's details page
         productDiv.addEventListener("click", () => {
-          // Redirect to the product details page passing product ID and title
           window.location.href = `/html/product.html?id=${product.id}&title=${product.title.rendered}`;
         });
 
@@ -292,14 +308,11 @@ async function displayJackets() {
   }
 }
 
-// Event listener for the DOMContentLoaded event
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const productsList = document.getElementById("flexbox-container");
-
+    const productsList = document.getElementById("flexbox-container"); // Ensure this ID matches the ID in your HTML
     if (!productsList) {
-      console.error("Error: flexbox-container not found in the document.");
-      return;
+      throw new Error("Error: 'flexbox-container' not found in the document.");
     }
 
     // Call the displayJackets function to show products
